@@ -5,16 +5,20 @@ const webpack = require('webpack')
 const config = require('../config')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')// copy-webpack-plugin，用于将static中的静态文件复制到产品文件夹dist
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+// 它会将所有的入口 chunk(entry chunks)中引用的 *.css，移动到独立分离的 CSS 文件
+// https://doc.webpack-china.org/plugins/extract-text-webpack-plugin/#src/components/Sidebar/Sidebar.jsx
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')// optimize-css-assets-webpack-plugin，用于优化和最小化css资源
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+// 传送门:https://webpack.js.org/plugins/uglifyjs-webpack-plugin/#src/components/Sidebar/Sidebar.jsx
+// uglifyJs 混淆js插件// 一个用来压缩优化JS大小的东西
 
 const env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
   : require('../config/prod.env')
-
+// 引入生产环境
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
@@ -23,6 +27,8 @@ const webpackConfig = merge(baseWebpackConfig, {
       usePostCSS: true
     })
   },
+  // 将webpack基本配置和生产环境配置合并在一起，生成css,postcss,less等规则，并进行模块转换，转换成webpack可识别的文件，进行解析
+  // 将CSS提取到单独文件中去
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
   output: {
     path: config.build.assetsRoot,

@@ -1,6 +1,7 @@
-# lianxi
+# 详解
 
-这是我练习用的
+ dependencies 是运行时依赖（生产环境）       npm install --save  **(package name)
+ devDependencies 是开发时的依赖（开发环境）  npm install --save-dev  **(package name)
 
 ## Build Setup
 
