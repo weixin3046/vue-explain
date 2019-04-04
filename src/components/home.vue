@@ -18,7 +18,7 @@
 </template>
 <script>
 export default {
-  name: 'App',
+  name: 'home',
   data () {
     return {
       title: 'Welcome to Your Vue.js App',
