@@ -12,7 +12,6 @@
       <el-aside>
         我是侧边内容
       </el-aside>
-
     </el-container>
   </div>
 </template>
@@ -32,7 +31,6 @@ export default {
     }
   }
 }
-
 </script>
 <style scoped>
 p {
@@ -50,5 +48,4 @@ a {
 .el-menu.el-menu--horizontal {
   border: 0;
 }
-
 </style>
