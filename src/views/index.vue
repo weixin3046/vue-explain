@@ -5,50 +5,50 @@
     </div>
     <div class="lowin-wrapper">
       <div v-show="login" class="lowin-box lowin-login">
-      <div class="lowin-box-inner">
-        <form>
-          <p>登录以继续</p>
-          <div class="lowin-group">
-            <label>电子邮件 <span v-show="forget" @click="forget=!forget" class="link fl-r">登录?</span></label>
-            <input type="email" autocomplete="email" name="email" class="lowin-input">
-          </div>
-          <div v-show="!forget" class="lowin-group password-group">
-            <label>密码 <span @click="forget=!forget" class="fl-r link">忘记密码?</span></label>
-            <input type="password" name="password" autocomplete="current-password" class="lowin-input">
-          </div>
-          <button class="lowin-btn login-btn">
-            登录
-          </button>
-          <div class="text-foot">
-            没有帐户? <span @click="login=!login" class="link">立即注册</span>
-          </div>
-        </form>
-      </div>
+        <div class="lowin-box-inner">
+          <form>
+            <p>登录以继续</p>
+            <div class="lowin-group">
+              <label>电子邮件 <span v-show="forget" @click="forget=!forget" class="link fl-r">登录?</span></label>
+              <input type="email" autocomplete="email" name="email" class="lowin-input">
+            </div>
+            <div v-show="!forget" class="lowin-group password-group">
+              <label>密码 <span @click="forget=!forget" class="fl-r link">忘记密码?</span></label>
+              <input type="password" name="password" autocomplete="current-password" class="lowin-input">
+            </div>
+            <button class="lowin-btn login-btn">
+              登录
+            </button>
+            <div class="text-foot">
+              没有帐户? <span @click="login=!login" class="link">立即注册</span>
+            </div>
+          </form>
+        </div>
       </div>
       <div v-show="!login" class="lowin-box lowin-register">
-      <div class="lowin-box-inner">
-        <form>
-          <p>我们来创建您的帐户</p>
-          <div class="lowin-group">
-            <label>用户名</label>
-            <input type="text" name="name" autocomplete="name" class="lowin-input">
-          </div>
-          <div class="lowin-group">
-            <label>电子邮件</label>
-            <input type="email" autocomplete="email" name="email" class="lowin-input">
-          </div>
-          <div class="lowin-group">
-            <label>密码</label>
-            <input type="password" name="password" autocomplete="current-password" class="lowin-input">
-          </div>
-          <button class="lowin-btn">
-            注册
-          </button>
-          <div class="text-foot">
-            已经有账号? <span @click="login=!login" class="link">立即登录</span>
-          </div>
-        </form>
-      </div>
+        <div class="lowin-box-inner">
+          <form>
+            <p>我们来创建您的帐户</p>
+            <div class="lowin-group">
+              <label>用户名</label>
+              <input type="text" name="name" autocomplete="name" class="lowin-input">
+            </div>
+            <div class="lowin-group">
+              <label>电子邮件</label>
+              <input type="email" autocomplete="email" name="email" class="lowin-input">
+            </div>
+            <div class="lowin-group">
+              <label>密码</label>
+              <input type="password" name="password" autocomplete="current-password" class="lowin-input">
+            </div>
+            <button class="lowin-btn">
+              注册
+            </button>
+            <div class="text-foot">
+              已经有账号? <span @click="login=!login" class="link">立即登录</span>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
