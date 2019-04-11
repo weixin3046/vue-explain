@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HomeCtrl from '@/components/home'
-import LoginCtrl from '@/views/index'
+import LoginCtrl from '@/views/login'
+import RegisterCtrl from '@/views/register'
 
 Vue.use(Router)
 
@@ -16,6 +17,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: LoginCtrl
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: RegisterCtrl
     }
   ]
 })
