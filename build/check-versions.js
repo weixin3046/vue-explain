@@ -9,7 +9,7 @@ const semver = require('semver')//引入的是一个语义化版本文件的npm�
 // semver.lt('1.2.3', '9.8.7') // true ，第一个参数的版本您是否比第二个小
  
 const packageConfig = require('../package.json')
-const shell = require('shelljs')
+const shell = require('shelljs')//用来执行unix命令的包
 
 function exec (cmd) {
   return require('child_process').execSync(cmd).toString().trim()
