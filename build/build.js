@@ -14,6 +14,7 @@ const webpackConfig = require('./webpack.prod.conf')// 开启转圈圈动画
 const spinner = ora('building for production...') //实现 loadding的模块
 spinner.start()
 // 调用rm方法，第一个参数的结果就是 绝对/工程名/dist/static，表示删除这个路径下面的所有文件
+// path.join使用平台特定的分隔符作为定界符将所有给定的 path 片段连接在一起，然后规范化生成的路径
 rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
   // 如果删除的过程中出现错误，就抛出这个错误，同时程序终止
   if (err) throw err
