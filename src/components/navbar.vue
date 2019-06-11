@@ -1,22 +1,8 @@
 <template>
   <div class="navbar">
-  	<div class="container clearfix">
-  		<div class="navbar-logo f-l">
-				<h1><router-link to="/">ChasingDream</router-link></h1>
-			</div>
-  		<ul class="f-l ">
-	      <li><router-link to="/">首页</router-link></li>
-	      <li><router-link to="/">技术杂谈</router-link></li>
-	      <li><router-link to="/">个人日记</router-link></li>
-	      <li><router-link to="/">个人简介</router-link></li>
-	      <li><router-link to="/">建站记录</router-link></li>
-	      <li><router-link to="/">留言板</router-link></li>
-	    </ul>
-	    <ul class="f-r">
-	      <li><router-link to="/login">登录</router-link></li>
-	      <li><router-link to="/register">注册</router-link></li>
-	    </ul>
-  	</div>  
+  	<ul class="f-l ">
+      <li v-for="item in navbarValue"><router-link to="/">{{item}}</router-link></li>
+    </ul> 
   </div>
 </template>
 <script>
@@ -26,6 +12,10 @@ export default {
     return {
     }
   },
+  props: {
+    navbarValue: Array,
+    required: true //字段是否必须
+  },
   methods: {
     fun (key, keyPath) {
     }
@@ -33,21 +23,6 @@ export default {
 }
 </script>
 <style scoped>
-.navbar {
-  background: #fff;
-}
-
-.navbar-logo h1 a {
-  color: #992252;
-  text-decoration: none;
-  padding: 10px;
-  display: inline-block;
-  letter-spacing: 1px; /* h1 和 h6 元素的字母间距：*/
-  text-transform: capitalize;/*文本中的每个单词以大写字母开头。*/
-  background: #fff;
-  font-family: 'Playball', cursive;
-}
-
 .navbar ul li {
 	float: left;
 	list-style: none;

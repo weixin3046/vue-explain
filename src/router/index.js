@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HomeCtrl from '@/components/home'
+import HomeCtrl from '@/views/home'
 import LoginCtrl from '@/views/login'
 import RegisterCtrl from '@/views/register'
 

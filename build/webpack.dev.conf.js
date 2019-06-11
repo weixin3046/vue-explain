@@ -23,6 +23,7 @@ const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 //processs为node的一个全局对象获取当前程序的环境变量，即host，
 // 传送门:http://javascript.ruanyifeng.com/nodejs/process.html#toc5
+console.log(config.dev.errorOverlay)
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
