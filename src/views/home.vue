@@ -21,8 +21,8 @@ export default {
         height:'400px',
         list: [{name:'这是首页',val:'1'},{name:'这是二页',val:'2'},{name:'这是三页',val:'3'}],
       },
-      navbar: ['首页', '技术杂谈', '个人日记', '个人简介', '建站记录', '留言板'],
-      login: ['登录', '注册']
+      navbar: [{name: '首页', url: 'home'}, {name: '个人日记', url: 'about'}, {name: '个人简介', url: 'about'}, {name: '建站记录', url: 'about'}, {name: '留言板', url: 'about'}],
+      login: [{name: '登录', url: 'login'}, {name: '注册', url: 'register'}]
     }
   },
   components:{navBar, swiper},

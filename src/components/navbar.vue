@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
   	<ul class="f-l ">
-      <li v-for="item in navbarValue"><router-link to="/">{{item}}</router-link></li>
+      <li v-for="item in navbarValue"><router-link :to="{name:item.url}">{{item.name}}</router-link></li>
     </ul> 
   </div>
 </template>
