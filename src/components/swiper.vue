@@ -2,7 +2,11 @@
 	<div class="swiper">
 		<el-carousel trigger="click" :height="swiperValue.height||'400px'">
 	      <el-carousel-item v-for="item in swiperValue.list" :key="item.name">
-	        <h3 class="small">{{ item.name }}</h3>
+	        <!-- <h3 class="small">{{ item.name }}</h3> -->
+          <img :src="item.images" alt="">
+          {{item.images}}
+          <!-- <img src="../assets/images/1.jpg" alt=""> -->
+          /static/img/1.5c12c87.jpg
 	      </el-carousel-item>
 	    </el-carousel>
 	</div>
@@ -35,10 +39,16 @@ export default {
   }
 
   .el-carousel__item:nth-child(2n) {
-     background-color: #99a9bf;
+     /*background-color: #99a9bf;*/
   }
   
   .el-carousel__item:nth-child(2n+1) {
-     background-color: #d3dce6;
+     /*background-color: #d3dce6;*/
   }
+
+img {
+  width: 100%;
+  height: 200px;
+  background: #123
+}
 </style>

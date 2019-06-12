@@ -1,7 +1,7 @@
 <template>
   <div class="lowin">
     <div class="lowin-brand">
-      <img src="../assets/kodinger.jpg" alt="logo">
+      <img src="../assets/images/kodinger.jpg" alt="logo">
     </div>
     <div class="lowin-wrapper">
       <div v-show="login" class="lowin-box lowin-login">
