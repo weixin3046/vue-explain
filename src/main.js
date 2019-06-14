@@ -11,6 +11,8 @@ Vue.config.productionTip = false;
 // Vue.prototype.axios = getTest;
 Vue.use(ElementUI)
 /* eslint-disable no-new */
+var  bus = new Vue()
+export default bus
 new Vue({
   el: '#app',
   router,

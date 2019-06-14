@@ -96,9 +96,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     // copy custom static assets
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, '../static'),
-        to: config.dev.assetsSubDirectory,
-        ignore: ['.*']
+        from: path.resolve(__dirname, '../static'),//定义要拷贝的源目录 
+        to: config.dev.assetsSubDirectory,//定义要拷贝到的目标目录
+        ignore: ['.*']//忽略拷贝指定的文件 忽略点开头的文件 *前代表文件名*后的代表文件后缀
       }
     ])
 
