@@ -25,7 +25,7 @@ service.interceptors.response.use(
     },
     function(error) {
       // 请求错误则向store commit这个状态变化
-      const httpError= { 
+      const httpError= {
         hasError:true,
         status:error.response.status,
         statusText:error.response.statusText
