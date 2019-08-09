@@ -13,5 +13,5 @@ export default function getTest(method, apiRoute, params) {
 	      params: params || ''
 	    })
 	}
-    
+
   }

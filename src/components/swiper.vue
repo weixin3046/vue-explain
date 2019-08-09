@@ -6,7 +6,6 @@
           <img :src="item.images" alt="">
           {{item.images}}
           <!-- <img src="../assets/images/1.jpg" alt=""> -->
-          /static/img/1.5c12c87.jpg
 	      </el-carousel-item>
 	    </el-carousel>
 	</div>

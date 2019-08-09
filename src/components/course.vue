@@ -6,7 +6,7 @@
 		<!-- <button @click="test">子传夫</button> -->
     <!-- <input type="text" v-model="mymessage">
     {{mymessage}} -->
-    <child v-bind="$attrs" v-on="$listeners"></child> 
+    <child v-bind="$attrs" v-on="$listeners"></child>
 	</div>
 </template>
 <script>

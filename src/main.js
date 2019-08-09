@@ -3,7 +3,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Ui from './assets/ui.css'
+import './global/ui.css'
+import'./fonts/iconfont.css'
 // import request from '@/global/api'
 // import getTest from "@/global/request.js";
 

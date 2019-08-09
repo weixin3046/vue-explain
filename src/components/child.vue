@@ -13,13 +13,13 @@ export default {
 	},
 	methods:{
 		passCData(val){
-                //触发父组件A中的事件
-                this.$emit('getCData',val)
-                console.log(this)
-            }
+      //触发父组件A中的事件
+      this.$emit('getCData',val)
+      console.log(this)
+	  }
 	}
 }
 </script>
 <style scoped>
-	
+
 </style>

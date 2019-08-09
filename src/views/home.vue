@@ -10,6 +10,7 @@
     <course :messagec="messagec"></course>
     <about></about>
     <book></book>
+    <div>{{test}}</div>
   </div>
 </template>
 <script>
@@ -30,12 +31,17 @@ export default {
       },
       navbar: [{name: '首页', url: 'home'}, {name: '个人日记', url: 'about'}, {name: '个人简介', url: 'about'}, {name: '建站记录', url: 'about'}, {name: '留言板', url: 'about'}],
       login: [{name: '登录', url: 'login'}, {name: '注册', url: 'register'}],
-      message:'hello',
+      message:new Date(),
       messagec:'hello c' //传递给c组件的数据
     }
   },
   components:{navBar, swiper, course, about, book},
-
+  computed: {
+    test(){
+      console.log(this.message)
+      return this.message
+    }
+  },
   methods: {
     getdata(){ 
         getTest('get','/topics',{
